@@ -64,11 +64,7 @@ In the create link screen (you can enter an application name of your choice):
 In the incoming link screen (you can enter an application name of your choice):
 * Consumer Key: `node-oauth-key1`
 * Consumer Name: `Node OAuth`
-* Public Key: `MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0YjCwIfYoprq/FQO6lb3asXrx
-              LlJFuCvtinTF5p0GxvQGu5O3gYytUvtC2JlYzypSRjVxwxrsuRcP3e641SdASwfr
-              mzyvIgP08N4S0IFzEURkV1wp/IpH7kH41EtbmUmrXSwfNZsnQRE5SYSOhh+LcK2w
-              yQkdgcMv11l4KoBkcwIDAQAB`
-
+* Public Key: copy public key contents excluding the header `-----BEGIN PUBLIC KEY-----` and footer `-----END PUBLIC KEY-----`.
 
 
 ###SSL Private key and certificate
@@ -100,7 +96,7 @@ $ openssl x509 -req -in certreq.csr -signkey rsa-key.pem -out rsa-cert.pem
 Start the local website.
 
 ```cmd
-node app.js
+npm start
 ```
 
 Open the website (if hosted at `https://localhost` - [https://localhost](https://localhost))
