@@ -1,5 +1,5 @@
 {
-  "name": "OAuth-REST-Atlassian",
+  "name": "oauth-rest-atlassian",
   "description": "An OAuth wrapper to authenticate and use the Atlassian REST API. The initial authorisation dance is managed through a local web page.",
   "version": "0.1.0",
   "directories": {
@@ -57,8 +57,8 @@
   },
   "config": {
     "adminEmail": "admin@cellarise.com",
-    "build": "15",
-    "buildTimestamp": "2014-09-02T20:07:35.166+10:00"
+    "build": "17",
+    "buildTimestamp": "2014-09-02T20:13:41.363+10:00"
   },
   "optionalDependencies": {}
 }
