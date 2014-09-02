@@ -124,7 +124,7 @@ You can test the REST API using the local website and path `/rest?req=`
 
 
 # API
-
+{{>main}}
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*.
 
 
