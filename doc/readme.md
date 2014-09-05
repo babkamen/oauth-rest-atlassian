@@ -124,9 +124,59 @@ You can test the REST API using the local website and path `/rest?req=`
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*.
 
 
+#Changelog
+
+<table style="width:100%;border-spacing:0px;border-collapse:collapse;margin:0px;padding:0px;border-width:0px;">
+   <tr>
+    <th style="width:20px;text-align:center;"></th>
+    <th style="width:80px;text-align:center;">Type</th> 
+    <th style="width:80px;text-align:left;">ID</th>
+    <th style="text-align:left;">Summary</th>
+   </tr>
+
+  <tr>
+    <td colspan=4><strong>Version: 0.2.0 - released 2014-08-05</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Feature</td> 
+    <td style="width:80px;text-align:left;">MDOAUTH-7</td>
+    <td>Package: Add Atlassian rest query function</td>
+   </tr>
+
+
+  <tr>
+    <td colspan=4><strong>Version: 0.1.1 - released 2014-09-02</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Non-functional</td> 
+    <td style="width:80px;text-align:left;">MDOAUTH-6</td>
+    <td>Web server: Fix mistakes in the readme describing how to launch the server and the private key entry step.</td>
+   </tr>
+
+
+  <tr>
+    <td colspan=4><strong>Version: 0.1.0 - released 2014-09-02</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Feature</td> 
+    <td style="width:80px;text-align:left;">MDOAUTH-4</td>
+    <td>Package: Update oauth function to enable oauth request and authorisation with Atlassian REST API.</td>
+   </tr>
+
+
+</table>
+
+
+
 # License
 
-MIT License (MIT)
+MIT License (MIT). All rights not explicitly granted in the license are reserved.
 
 Copyright (c) 2014 John Barry
 

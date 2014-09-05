@@ -5,6 +5,6 @@ Feature: OAuth authorisation dance
 
   Scenario: JIRA authorisation
 
-    Given I have an access token
+    Given I have an access token for my JIRA server
     When I perform the get issue operation on MDOAUTH-4
     Then issue MDOAUTH-4 is returned

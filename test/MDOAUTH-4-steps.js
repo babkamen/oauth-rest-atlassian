@@ -2,25 +2,30 @@
 "use strict";
 var English = require('yadda').localisation.English;
 var assert = require('assert');
-var OAuth = require('../lib/oauth').OAuth;
+var OAuth = require('..').OAuth;
 
 /* Feature: OAuth authorisation dance */
 module.exports = (function() {
     return English.library()
     /*Scenario: JIRA authorisation */
-        .define("Given I have an access token", function(done) {
-            var config = require("../config.json");
-            var app_config = config.applications[config.default];
-            var basePath = app_config.protocol + "://" + app_config.host + ":" + app_config.port;
-            this.world.app_config = app_config;
+        .define("Given I have an access token for my JIRA server", function(done) {
+            var config;
+            if(process.env.hasOwnProperty("oauth_config_path")){
+                config = require(process.env.oauth_config_path);
+            } else {
+                config = require("../config.json");
+            }
+            var appConfig = config.applications[config.default];
+            var basePath = appConfig.protocol + "://" + appConfig.host + ":" + appConfig.port;
+            this.world.app_config = appConfig;
             this.world.basePath = basePath;
             //oauth consumer object
             this.world.consumer =
                 new OAuth(
-                        basePath + app_config.paths['request-token'],
-                        basePath + app_config.paths['access-token'],
-                    app_config.oauth.consumer_key,
-                    app_config.oauth.consumer_secret,
+                        basePath + appConfig.paths['request-token'],
+                        basePath + appConfig.paths['access-token'],
+                    appConfig.oauth.consumer_key,
+                    appConfig.oauth.consumer_secret,
                     "1.0",
                     "https://localhost/callback/",
                     "RSA-SHA1");
