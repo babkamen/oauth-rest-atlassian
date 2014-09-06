@@ -1,9 +1,10 @@
 "use strict";
 var rename = require("gulp-rename");
 var path = require('path');
+var fs = require('fs');
 var GulpDustCompileRender = require('gulp-dust-compile-render');
-var jiraRest = require('../lib/jira-rest');
-var asyncPipe = require('gulp-async-function-runner');
+var jiraRest = require('oauth-rest-atlassian').rest;
+var asyncPipe = require('gulp-async-func-runner');
 
 /**
  * A gulp build task to compile and render the `doc/templates/readme.dust.md` document template.
@@ -11,7 +12,8 @@ var asyncPipe = require('gulp-async-function-runner');
  * 1) readme-license.dust.md (this file is produced by the `license` gulp task)
  * 2) readme-usage.dust.md (this file is updated manually with installation and usage information)
  * 3) readme-changelog.dust.md (this file is using to provide the layout for the changelog)
- * The changelog data is automatically sourced from Jira if the package.json file contains property `config.projectCode`.
+ * The changelog data is automatically sourced from Jira if the oauth config.json file exists and
+ * package.json file contains property `config.projectCode`.
  * The result is saved to `doc/readme.md`.
  * This step is a pre-requisite to running the `doc` gulp task.
  * The `doc` gulp task executes the JSDoc documentation generator, which requires files saved to disk.
@@ -40,7 +42,6 @@ module.exports = function(gulp, context) {
      ```
      */
     function prepareChangeLogJSON(data){
-        data = JSON.parse(data);
         var changeLogJSON = {
                 releases: []
             },
@@ -93,23 +94,30 @@ module.exports = function(gulp, context) {
             partialsGlob: path.join(cwd, directories.doc) + '/templates/*.dust*'
         };
 
-        var jiraQuery = "search?jql=(project = " + pkg.config.projectCode + " AND " +
-            "issuetype in standardIssueTypes() AND issuetype != Task AND " +
-            "resolution != Unresolved AND " +
-            "fixVersion in (unreleasedVersions(), releasedVersions())) ORDER BY fixVersion DESC, resolutiondate DESC";
-        var queryFields = "&fields=Key,summary,issuetype,status,fixVersions,priority,components,resolution,resolutiondate";
+        var jiraQuery = "";
+        var queryFields = "";
+        var config = {};
         var configPath = path.resolve(__dirname, "..") + "/config.json";
-        var config = require(configPath).applications.jira;
+
+        //check if the oauth config file exists
+        if(fs.existsSync(configPath) && pkg.config && pkg.config.projectCode){
+            config = require(configPath).applications.jira;
+            jiraQuery = "search?jql=(project = " + pkg.config.projectCode + " AND " +
+                "issuetype in standardIssueTypes() AND issuetype != Task AND " +
+                "resolution != Unresolved AND " +
+                "fixVersion in (unreleasedVersions(), releasedVersions())) ORDER BY fixVersion DESC, resolutiondate DESC";
+            queryFields = "&fields=Key,summary,issuetype,status,fixVersions,priority,components,resolution,resolutiondate";
+        }
 
         return gulp.src(directories.doc + '/templates/readme.dust.md')
             .pipe(asyncPipe({
                 oneTimeRun: true,
                 passThrough: true,
                 config: config,
-                jql: jiraQuery + queryFields
+                query: jiraQuery + queryFields
             },
                 function(opts, chunk, cb){
-                    jiraRest.getJql(opts, cb);
+                    jiraRest(opts, cb);
                 },
                 function(error, data){
                 if(!error){

@@ -1,7 +1,10 @@
 # oauth-rest-atlassian
-[![view on npm](http://img.shields.io/npm/v/oauth-rest-atlassian.svg)](https://www.npmjs.org/package/oauth-rest-atlassian)
-[![npm module downloads per month](http://img.shields.io/npm/dm/oauth-rest-atlassian.svg)](https://www.npmjs.org/package/oauth-rest-atlassian)
-[![Dependency Status](https://david-dm.org/Cellarise/oauth-rest-atlassian.svg)](https://david-dm.org/Cellarise/oauth-rest-atlassian)
+[![view on npm](http://img.shields.io/npm/v/oauth-rest-atlassian.svg?style=flat)](https://www.npmjs.org/package/oauth-rest-atlassian)
+[![npm module downloads per month](http://img.shields.io/npm/dm/oauth-rest-atlassian.svg?style=flat)](https://www.npmjs.org/package/oauth-rest-atlassian)
+[![Dependency status](https://david-dm.org/Cellarise/oauth-rest-atlassian.svg?style=flat)](https://david-dm.org/Cellarise/oauth-rest-atlassian)
+[![Coverage](https://img.shields.io/badge/coverage-100%25_skipped:46%25-brightgreen.svg?style=flat)](https://www.npmjs.org/package/oauth-rest-atlassian)
+[![Open issues](https://img.shields.io/github/issues/Cellarise/oauth-rest-atlassian.svg?style=flat)](https://github.com/Cellarise/oauth-rest-atlassian/issues)
+
 
 > An OAuth wrapper to authenticate and use the Atlassian REST API. The initial authorisation dance is managed through a local web page.
 
@@ -156,7 +159,19 @@ The callback function must have the following signature: done(error, data).
    </tr>
 
   <tr>
-    <td colspan=4><strong>Version: 0.2.0 - released 2014-08-05</strong></td>
+    <td colspan=4><strong>Version: 0.2.1 - released 2014-08-06</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10403&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Bug</td> 
+    <td style="width:80px;text-align:left;">MDOAUTH-9</td>
+    <td>Rest: Fix function hang when provided invalid options.</td>
+   </tr>
+
+
+  <tr>
+    <td colspan=4><strong>Version: 0.2.0 - released 2014-09-05</strong></td>
    </tr>
 
   <tr>
