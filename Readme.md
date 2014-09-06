@@ -159,7 +159,19 @@ The callback function must have the following signature: done(error, data).
    </tr>
 
   <tr>
-    <td colspan=4><strong>Version: 0.2.1 - released 2014-08-06</strong></td>
+    <td colspan=4><strong>Version: 0.2.2 - released 2014-09-06</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Non-functional</td> 
+    <td style="width:80px;text-align:left;">MDOAUTH-10</td>
+    <td>Readme: Fix error in changelog.</td>
+   </tr>
+
+
+  <tr>
+    <td colspan=4><strong>Version: 0.2.1 - released 2014-09-06</strong></td>
    </tr>
 
   <tr>
