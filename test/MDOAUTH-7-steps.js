@@ -8,9 +8,9 @@ var rest = require('..').rest;
 module.exports = (function() {
     return English.library()
     /*Scenario: JIRA rest query */
-        .define("When I perform a jql search", function(done) {
+        .define("$type I perform a jql search on issue $key and save the result", function(type, key, done) {
             var self = this;
-            var jiraQuery = "search?jql=(issue=MDOAUTH-7)";
+            var jiraQuery = "search?jql=(issue=" + key + ")";
             var config;
             if(process.env.hasOwnProperty("oauth_config_path")){
                 config = require(process.env.oauth_config_path);
@@ -24,11 +24,12 @@ module.exports = (function() {
             function(error, data){
                 assert(!error);
                 self.world.searchData = data;
+                self.world.searchKey = key;
                 done();
             });
         })
         .define("Then expected search results are returned", function(done) {
-            assert.equal(this.world.searchData.issues[0].key, "MDOAUTH-7");
+            assert.equal(this.world.searchData.issues[0].key, this.world.searchKey);
             done();
         });
 })();

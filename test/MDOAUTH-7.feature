@@ -4,8 +4,8 @@ Feature: Package: Add Atlassian rest query function
   I can execute a JIRA rest query using oauth config
   So that I can efficiently read data or write data to my JIRA server
 
-  Scenario: JIRA rest query
+  Scenario: JIRA GET rest query
 
     Given I have an access token for my JIRA server
-    When I perform a jql search
+    When I perform a jql search on issue MDOAUTH-7 and save the result
     Then expected search results are returned
