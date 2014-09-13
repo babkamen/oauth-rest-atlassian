@@ -1,7 +1,7 @@
 {
   "name": "oauth-rest-atlassian",
   "description": "An OAuth wrapper to authenticate and use the Atlassian REST API. The initial authorisation dance is managed through a local web page.",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "directories": {
     "lib": "lib",
     "bin": "bin",
@@ -10,9 +10,7 @@
     "templates": "templates",
     "test": "Test",
     "reports": "Reports",
-    "build": "Build",
-    "testFeatures": "Test\\functional",
-    "testSteps": "Test\\functional"
+    "build": "Build"
   },
   "bin": {
     "oauth": "server.js"
@@ -102,8 +100,8 @@
         }
       }
     },
-    "build": "35",
-    "buildTimestamp": "2014-09-13T20:58:10.762+10:00"
+    "build": "38",
+    "buildTimestamp": "2014-09-13T21:29:12.567+10:00"
   },
   "optionalDependencies": {}
 }
