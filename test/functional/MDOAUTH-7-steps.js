@@ -2,7 +2,7 @@
 "use strict";
 var English = require('yadda').localisation.English;
 var assert = require('assert');
-var rest = require('..').rest;
+var rest = require('../..').rest;
 
 /* Feature: Package: Add Atlassian rest query function */
 module.exports = (function() {
@@ -15,7 +15,7 @@ module.exports = (function() {
             if(process.env.hasOwnProperty("oauth_config_path")){
                 config = require(process.env.oauth_config_path);
             } else {
-                config = require("../config.json");
+                config = require("../../config.json");
             }
             rest({
                 config: config.applications.jira,

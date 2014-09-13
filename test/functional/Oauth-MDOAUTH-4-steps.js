@@ -2,20 +2,21 @@
 "use strict";
 var English = require('yadda').localisation.English;
 var assert = require('assert');
-var OAuth = require('..').OAuth;
+var OAuth = require('../..').OAuth;
+
+var config;
+if(process.env.hasOwnProperty("oauth_config_path")){
+    config = require(process.env.oauth_config_path);
+} else {
+    config = require("../../config.json");
+}
 
 /* Feature: OAuth authorisation dance */
 module.exports = (function() {
     return English.library()
     /*Scenario: JIRA authorisation */
         .define("Given I have an access token for my JIRA server", function(done) {
-            var config;
-            if(process.env.hasOwnProperty("oauth_config_path")){
-                config = require(process.env.oauth_config_path);
-            } else {
-                config = require("../config.json");
-            }
-            var appConfig = config.applications[config.default];
+            var appConfig = config.applications.jira;
             var basePath = appConfig.protocol + "://" + appConfig.host + ":" + appConfig.port;
             this.world.app_config = appConfig;
             this.world.basePath = basePath;

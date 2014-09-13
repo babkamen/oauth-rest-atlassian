@@ -1,5 +1,5 @@
-@libraries=MDOAUTH-4-steps
-Feature: Package: Add Atlassian rest query function
+@libraries=Oauth-MDOAUTH-4-steps
+Feature: Package: Add Atlassian JIRA rest query function
   As a developer
   I can execute a JIRA rest query using oauth config
   So that I can efficiently read data or write data to my JIRA server

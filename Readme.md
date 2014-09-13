@@ -5,7 +5,6 @@
 [![Coverage](https://img.shields.io/badge/coverage-84%25_skipped:28%25-green.svg?style=flat)](https://www.npmjs.org/package/oauth-rest-atlassian)
 [![Open issues](https://img.shields.io/github/issues/Cellarise/oauth-rest-atlassian.svg?style=flat)](https://github.com/Cellarise/oauth-rest-atlassian/issues)
 
-
 > An OAuth wrapper to authenticate and use the Atlassian REST API. The initial authorisation dance is managed through a local web page.
 
 
@@ -24,7 +23,6 @@ Setup config.json at the root of the package.
 
 ```js
 {
-    "default": "jira",
     "protocol": "http",
     "host": "localhost",
     "port": "8080",
@@ -34,7 +32,22 @@ Setup config.json at the root of the package.
     "applications": {
         "jira": {
             "protocol": "https",
-            "host": "jira.cellarise.com",
+            "host": "myhost.com",
+            "port": "443",
+            "oauth": {
+                "consumer_key": "node-oauth-key1",
+                "consumer_secret": "",
+                "access_token": "",
+                "access_token_secret": ""
+            },
+            "paths": {
+                "request-token": "/plugins/servlet/oauth/request-token",
+                "access-token": "/plugins/servlet/oauth/access-token",
+                "authorize": "/plugins/servlet/oauth/authorize"
+            }
+        "bamboo": {
+            "protocol": "https",
+            "host": "myhost.com",
             "port": "443",
             "oauth": {
                 "consumer_key": "node-oauth-key1",
@@ -48,6 +61,7 @@ Setup config.json at the root of the package.
                 "authorize": "/plugins/servlet/oauth/authorize"
             }
         }
+        },
     }
 }
 ```
@@ -110,7 +124,9 @@ Start the local website.
 npm start
 ```
 
-Open the website (if hosted at `https://localhost` - [https://localhost](https://localhost))
+Open the website at path /jira for JIRA authorisation or /bamboo for Bamboo authorisation:
+* If your config is set to host at `https://localhost` then JIRA authorisation - [https://localhost/jira](https://localhost/jira)
+* If your config is set to host at `https://localhost` then Bamboo authorisation - [https://localhost/bamboo](https://localhost/bamboo)
 
 If you have configured the https protocol and used a self signed certificate you will need to navigate security warnings.
 
@@ -119,7 +135,12 @@ If the Atlassian application configuration is valid and you have setup the appli
 
 ###Using the REST API
 
-You can test the REST API using the local website and path `/rest?req=`
+You can test the REST API using the local website and path `/rest?req=`.
+
+For example:
+* If your config is set to host at `https://localhost` then get all projects from JIRA - [https://localhost/jira/rest?req=project](https://localhost/jira/rest?req=project)
+* If your config is set to host at `https://localhost` then get all plans from Bamboo - [https://localhost/bamboo/rest?req=plan](https://localhost/bamboo/rest?req=plan)
+
 
 
 # API
@@ -159,6 +180,18 @@ The callback function must have the following signature: done(error, data).
     <th style="width:80px;text-align:left;">ID</th>
     <th style="text-align:left;">Summary</th>
    </tr>
+
+  <tr>
+    <td colspan=4><strong>Version: 0.4.0 - released 2014-09-13</strong></td>
+   </tr>
+
+  <tr>
+    <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td> 
+    <td style="width:80px;text-align:center;">Feature</td> 
+    <td style="width:80px;text-align:left;">MDOAUTH-12</td>
+    <td>Rest: Add Atlassian Bamboo support</td>
+   </tr>
+
 
   <tr>
     <td colspan=4><strong>Version: 0.3.0 - released 2014-09-09</strong></td>
@@ -204,7 +237,7 @@ The callback function must have the following signature: done(error, data).
     <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td> 
     <td style="width:80px;text-align:center;">Feature</td> 
     <td style="width:80px;text-align:left;">MDOAUTH-7</td>
-    <td>Package: Add Atlassian rest query function</td>
+    <td>Package: Add Atlassian JIRA rest query function</td>
    </tr>
 
 
@@ -228,7 +261,7 @@ The callback function must have the following signature: done(error, data).
     <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td> 
     <td style="width:80px;text-align:center;">Feature</td> 
     <td style="width:80px;text-align:left;">MDOAUTH-4</td>
-    <td>Package: Update oauth function to enable oauth request and authorisation with Atlassian REST API.</td>
+    <td>OAuth: OAuth authorisation dance</td>
    </tr>
 
 

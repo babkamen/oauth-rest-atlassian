@@ -13,7 +13,6 @@ Setup config.json at the root of the package.
 
 ```js
 {
-    "default": "jira",
     "protocol": "http",
     "host": "localhost",
     "port": "8080",
@@ -23,7 +22,22 @@ Setup config.json at the root of the package.
     "applications": {
         "jira": {
             "protocol": "https",
-            "host": "jira.cellarise.com",
+            "host": "myhost.com",
+            "port": "443",
+            "oauth": {
+                "consumer_key": "node-oauth-key1",
+                "consumer_secret": "",
+                "access_token": "",
+                "access_token_secret": ""
+            },
+            "paths": {
+                "request-token": "/plugins/servlet/oauth/request-token",
+                "access-token": "/plugins/servlet/oauth/access-token",
+                "authorize": "/plugins/servlet/oauth/authorize"
+            }
+        "bamboo": {
+            "protocol": "https",
+            "host": "myhost.com",
             "port": "443",
             "oauth": {
                 "consumer_key": "node-oauth-key1",
@@ -37,6 +51,7 @@ Setup config.json at the root of the package.
                 "authorize": "/plugins/servlet/oauth/authorize"
             }
         }
+        },
     }
 }
 ```
@@ -99,7 +114,9 @@ Start the local website.
 npm start
 ```
 
-Open the website (if hosted at `https://localhost` - [https://localhost](https://localhost))
+Open the website at path /jira for JIRA authorisation or /bamboo for Bamboo authorisation:
+* If your config is set to host at `https://localhost` then JIRA authorisation - [https://localhost/jira](https://localhost/jira)
+* If your config is set to host at `https://localhost` then Bamboo authorisation - [https://localhost/bamboo](https://localhost/bamboo)
 
 If you have configured the https protocol and used a self signed certificate you will need to navigate security warnings.
 
@@ -108,4 +125,8 @@ If the Atlassian application configuration is valid and you have setup the appli
 
 ###Using the REST API
 
-You can test the REST API using the local website and path `/rest?req=`
+You can test the REST API using the local website and path `/rest?req=`.
+
+For example:
+* If your config is set to host at `https://localhost` then get all projects from JIRA - [https://localhost/jira/rest?req=project](https://localhost/jira/rest?req=project)
+* If your config is set to host at `https://localhost` then get all plans from Bamboo - [https://localhost/bamboo/rest?req=plan](https://localhost/bamboo/rest?req=plan)

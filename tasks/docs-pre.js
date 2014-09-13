@@ -61,7 +61,7 @@ module.exports = function(gulp, context) {
                 //check if version date set, otherwise set to current date
                 if(!currentVersion.releaseDate){
                     currentVersion.releaseDate = date.getFullYear() + "-" +
-                        ("0" + date.getMonth()).slice(-2) + "-" +
+                        ("0" + (date.getMonth() + 1)).slice(-2) + "-" +
                         ("0" + date.getDate()).slice(-2);
                 }
                 release = currentVersion;

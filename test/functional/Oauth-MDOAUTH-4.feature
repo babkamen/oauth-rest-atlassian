@@ -1,4 +1,4 @@
-Feature: OAuth authorisation dance
+Feature: OAuth: OAuth authorisation dance
   As a developer
   I can authorise my OAuth REST connection using a private key
   So that I do not need to store my password

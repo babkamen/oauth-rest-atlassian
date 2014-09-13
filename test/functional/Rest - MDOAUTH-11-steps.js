@@ -2,13 +2,13 @@
 "use strict";
 var English = require('yadda').localisation.English;
 var assert = require('assert');
-var rest = require('..').rest;
+var rest = require('../..').rest;
 
 var config;
 if(process.env.hasOwnProperty("oauth_config_path")){
     config = require(process.env.oauth_config_path);
 } else {
-    config = require("../config.json");
+    config = require("../../config.json");
 }
 
 /* Feature: Rest: Add post, put and delete methods to rest function */

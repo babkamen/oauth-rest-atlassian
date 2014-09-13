@@ -41,7 +41,7 @@ module.exports = function (gulp, context) {
         return gulp.src(directories.test + '/test.js')
             .pipe(mocha({
                 reporter: reporter,
-                timeout: 3000
+                timeout: 5000
             }))
             .on("error", handleError)
             .pipe(istanbul.writeReports({
@@ -88,7 +88,7 @@ module.exports = function (gulp, context) {
 
     /**
      * A gulp build task to run test steps and calculate test coverage.  Test steps results will be output using spec reporter.
-     * @alias tasks:test-cli
+     * @alias tasks:test
      */
     gulp.task('test', function () {
         return test('spec');

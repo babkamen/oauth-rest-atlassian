@@ -5,7 +5,6 @@
 [![Coverage](https://img.shields.io/badge/coverage-{config.coverage.stats.overall.pct}%25_skipped:{config.coverage.stats.skipped.pct}%25-{config.coverage.stats.overall.colour}.svg?style=flat)](https://www.npmjs.org/package/{name})
 [![Open issues](https://img.shields.io/github/issues/Cellarise/{name}.svg?style=flat)](https://github.com/Cellarise/{name}/issues)
 
-
 > {description}
 
 

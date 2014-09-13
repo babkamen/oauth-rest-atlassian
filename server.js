@@ -13,40 +13,61 @@ var fs = require('fs');
 
 //get config
 var config = require(process.cwd() + "/config.json");
-var app_config = config.applications[config.default];
+var appConfigJira = config.applications.jira;
+var appConfigBamboo = config.applications.bamboo;
 
+//JIRA
 //setup consumer_secret if not already set to private key
-if (app_config.oauth.consumer_secret === "") {
-    app_config.oauth.consumer_secret = fs.readFileSync(process.cwd() + config.consumerPrivateKeyFile, "utf8");
-    config.applications[config.default] = app_config;
+if (appConfigJira.oauth.consumer_secret === "") {
+    appConfigJira.oauth.consumer_secret = fs.readFileSync(process.cwd() + config.consumerPrivateKeyFile, "utf8");
+    config.applications.jira = appConfigJira;
     fs.writeFileSync(process.cwd() + '/config.json', JSON.stringify(config, null, 2));
 }
+var basePathJira = appConfigJira.protocol + "://" + appConfigJira.host + ":" + appConfigJira.port;
+//oauth consumerJira object
+var consumerJira =
+    new OAuth(
+            basePathJira + appConfigJira.paths['request-token'],
+            basePathJira + appConfigJira.paths['access-token'],
+        appConfigJira.oauth.consumer_key,
+        appConfigJira.oauth.consumer_secret,
+        "1.0",
+        "https://localhost/jira/callback/",
+        "RSA-SHA1");
 
-var basePath = app_config.protocol + "://" + app_config.host + ":" + app_config.port;
+
+//Bamboo
+//setup consumer_secret if not already set to private key
+if (appConfigBamboo.oauth.consumer_secret === "") {
+    appConfigBamboo.oauth.consumer_secret = fs.readFileSync(process.cwd() + config.consumerPrivateKeyFile, "utf8");
+    config.applications.bamboo = appConfigBamboo;
+    fs.writeFileSync(process.cwd() + '/config.json', JSON.stringify(config, null, 2));
+}
+var basePathBamboo = appConfigBamboo.protocol + "://" + appConfigBamboo.host + ":" + appConfigBamboo.port;
+//oauth consumerBambooobject
+var consumerBamboo =
+    new OAuth(
+            basePathBamboo + appConfigBamboo.paths['request-token'],
+            basePathBamboo + appConfigBamboo.paths['access-token'],
+        appConfigBamboo.oauth.consumer_key,
+        appConfigBamboo.oauth.consumer_secret,
+        "1.0",
+        "https://localhost/bamboo/callback/",
+        "RSA-SHA1");
+
 
 //setup express
 app.use(errorHandler({ dumpExceptions: true, showStack: true }));
 app.use(logger('combined'));
 app.use(cookieParser());
 app.use(session({
-    secret: app_config.oauth.consumer_secret,
+    secret: appConfigJira.oauth.consumer_secret,
     resave: true,
     saveUninitialized: true
 }));
 
-//oauth consumer object
-var consumer =
-    new OAuth(
-        basePath + app_config.paths['request-token'],
-        basePath + app_config.paths['access-token'],
-        app_config.oauth.consumer_key,
-        app_config.oauth.consumer_secret,
-        "1.0",
-        "https://localhost/callback/",
-        "RSA-SHA1");
 
-//get new access token
-app.get('/', function (request, response) {
+function getAccessToken(consumer, appConfig, basePath, request, response){
     consumer.getOAuthRequestToken(
         function (error, oauthToken, oauthTokenSecret) {
             if (error) {
@@ -56,14 +77,13 @@ app.get('/', function (request, response) {
             else {
                 request.session.oauthRequestToken = oauthToken;
                 request.session.oauthRequestTokenSecret = oauthTokenSecret;
-                response.redirect(basePath + app_config.paths.authorize + "?oauth_token=" + request.session.oauthRequestToken);
+                response.redirect(basePath + appConfig.paths.authorize + "?oauth_token=" + request.session.oauthRequestToken);
             }
         }
     );
-});
+}
 
-//oauth dance callback
-app.get('/callback', function (request, response) {
+function callback(consumer, appConfig, app, request, response){
     consumer.getOAuthAccessToken(request.session.oauthRequestToken, request.session.oauthRequestTokenSecret, request.query.oauth_verifier,
         function (error, oauthAccessToken, oauthAccessTokenSecret) {
             if (error) {
@@ -71,27 +91,50 @@ app.get('/callback', function (request, response) {
                 response.send("Error getting access token");
             }
             else {
-                app_config.oauth.access_token = oauthAccessToken;
-                app_config.oauth.access_token_secret = oauthAccessTokenSecret;
+                appConfig.oauth.access_token = oauthAccessToken;
+                appConfig.oauth.access_token_secret = oauthAccessTokenSecret;
                 //save to config file
-                config.applications[config.default] = app_config;
+                config.applications[app] = appConfig;
                 fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
                 response.send("Successfully saved new OAuth access token");
             }
         }
     );
-});
+}
 
-//access rest api
-app.get('/rest', function (request, response) {
+function rest(consumer, appConfig, basePath, request, response){
     consumer.get(basePath + "/rest/api/latest/" + request.query.req,
-        app_config.oauth.access_token,
-        app_config.oauth.access_token_secret,
+        appConfig.oauth.access_token,
+        appConfig.oauth.access_token_secret,
         function (error, data) {
             data = JSON.parse(data);
             response.send(JSON.stringify(data, null, 2));
         }
     );
+}
+
+//get new access token
+app.get('/jira', function (request, response) {
+    getAccessToken(consumerJira, appConfigJira, basePathJira, request, response);
+});
+app.get('/bamboo', function (request, response) {
+    getAccessToken(consumerBamboo, appConfigBamboo, basePathBamboo, request, response);
+});
+
+//oauth dance callback
+app.get('/jira/callback', function (request, response) {
+    callback(consumerJira, appConfigJira, 'jira', request, response);
+});
+app.get('/bamboo/callback', function (request, response) {
+    callback(consumerBamboo, appConfigBamboo, 'bamboo', request, response);
+});
+
+//access rest api
+app.get('/jira/rest', function (request, response) {
+    rest(consumerJira, appConfigJira, basePathJira, request, response);
+});
+app.get('/bamboo/rest', function (request, response) {
+    rest(consumerBamboo, appConfigBamboo, basePathBamboo, request, response);
 });
 
 if(config.protocol === "https") {

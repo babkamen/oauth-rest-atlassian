@@ -1,4 +1,4 @@
-@libraries=MDOAUTH-4-steps
+@libraries=Oauth-MDOAUTH-4-steps
 Feature: Rest: Add post, put and delete methods to rest function
   As a developer
   I can execute a JIRA rest query using the post, put and delete methods
