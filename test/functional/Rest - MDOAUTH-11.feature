@@ -16,6 +16,13 @@ Feature: Rest: Add post, put and delete methods to rest function
     When I perform a put update operation
     Then expected update is performed
 
+  @bug=MDOAUTH-14
+  Scenario: JIRA transition rest query
+
+    Given I have an access token for my JIRA server
+    When I perform a transition operation
+    Then expected transition is performed
+
   Scenario: JIRA DELETE rest query
 
     Given I have an access token for my JIRA server

@@ -72,7 +72,38 @@ module.exports = (function() {
                     assert.equal(data.issues[0].fields.summary, 'test-update');
                     done();
                 });
-        })/*Scenario: JIRA DELETE rest query */
+        })
+        .define("When I perform a transition operation", function(done) {
+            var jiraQuery = "issue/" + this.world.newIssue.key + "/transitions";
+            rest({
+                    config: config.applications.jira,
+                    query: jiraQuery,
+                    method: 'post',
+                    postData: {
+                        /*update: {
+                         comment: [
+                         {
+                         add: {
+                         body: "Auto-update"
+                         }
+                         }
+                         ]
+                         },*/
+                        transition: {
+                            id: "11" //transition issue to in-progress '11'
+                        }
+                    }
+                },
+                function(error){
+                    assert(!error);
+                    done();
+                });
+        })
+        .define("Then expected transition is performed", function(done) {
+            assert(true);
+            done();
+        })
+        /*Scenario: JIRA DELETE rest query */
         .define("When I perform a delete operation", function(done) {
             var jiraQuery = "issue/" + this.world.newIssue.key;
             rest({
