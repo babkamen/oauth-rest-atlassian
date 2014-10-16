@@ -5,8 +5,8 @@ var assert = require('assert');
 var OAuth = require('../..').OAuth;
 
 var config;
-if(process.env.hasOwnProperty("oauth_config_path")){
-    config = require(process.env.oauth_config_path);
+if(process.env.hasOwnProperty("bamboo_oauth_config_path")){
+    config = require(process.env.bamboo_oauth_config_path);
 } else {
     config = require("../../config.json");
 }

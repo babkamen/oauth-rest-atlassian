@@ -1,22 +1,26 @@
-/* jslint node: true */
-"use strict";
-var mocha = require('gulp-mocha');
-var mkdirp = require('mkdirp');
-var istanbul = require('gulp-istanbul-custom-reports');
-istanbul.registerReport(require('istanbul-reporter-clover-limits'));
-var gutil = require('gulp-util');
-var glob = require('glob');
-var path = require('path');
-var _ = require('underscore');
-
 /**
  * A set of gulp build tasks to run test steps.
+ * @param gulp {gulp} - The gulp module
+ * @param context {Object} - An object containing the following properties:
+ * @param context.cwd {String} - The current working directory
+ * @param context.package {json} - The package.json for the module
+ * @param context.argv {Array} - The arguments past to the gulp task
+ * @param context.logger {bunyan} - A logger matching the bunyan API
  * @alias tasks:test-tasks
  */
 module.exports = function (gulp, context) {
+    "use strict";
+    var mocha = require('gulp-mocha');
+    var mkdirp = require('mkdirp');
+    var istanbul = require('gulp-istanbul-custom-reports');
+    istanbul.registerReport(require('istanbul-reporter-clover-limits'));
+    var glob = require('glob');
+    var path = require('path');
+    var _ = require('underscore');
+    var logger = context.logger;
 
     function handleError(err) {
-        gutil.log(err.toString());
+        logger.error(err.toString());
         this.emit('end'); //jshint ignore:line
     }
 
@@ -32,16 +36,22 @@ module.exports = function (gulp, context) {
             scriptPath = path.resolve(process.cwd(), value);
             try {
                 require(scriptPath); // Make sure all files are loaded to get accurate coverage data
-                gutil.log('Loaded: ' + scriptPath);
+                logger.info('Loaded: ' + scriptPath);
             } catch (err) {
-                gutil.log('Could not load: ' + scriptPath);
+                logger.warn('Could not load: ' + scriptPath);
             }
         });
+
+        //set YADDA_FEATURE_GLOB if argv[2]
+        if(context.argv.length === 2){
+            process.env.YADDA_FEATURE_GLOB = context.argv[1];
+            logger.info('Set process.env.YADDA_FEATURE_GLOB=' + process.env.YADDA_FEATURE_GLOB);
+        }
 
         return gulp.src(directories.test + '/test.js')
             .pipe(mocha({
                 reporter: reporter,
-                timeout: 5000
+                timeout: 500000
             }))
             .on("error", handleError)
             .pipe(istanbul.writeReports({
@@ -80,9 +90,10 @@ module.exports = function (gulp, context) {
         var cwd = context.cwd;
         var pkg = context.package;
         var directories = pkg.directories;
+        var path = require('path');
 
-        process.env.MOCHA_FILE = cwd + '/' + directories.reports + '/unit-mocha-tests.json'; //results file path for mocha-bamboo-reporter-bgo
-        mkdirp.sync(cwd + '/' + directories.reports); //make sure the Reports directory exists - required for mocha-bamboo-reporter-bgo
+        process.env.MOCHA_FILE = path.join(cwd, directories.reports, 'unit-mocha-tests.json'); //results file path for mocha-bamboo-reporter-bgo
+        mkdirp.sync(path.join(cwd, directories.reports)); //make sure the Reports directory exists - required for mocha-bamboo-reporter-bgo
         return test('mocha-bamboo-reporter-bgo');
     });
 

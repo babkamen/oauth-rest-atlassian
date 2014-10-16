@@ -12,8 +12,8 @@ module.exports = (function() {
             var self = this;
             var jiraQuery = "search?jql=(issue=" + key + ")";
             var config;
-            if(process.env.hasOwnProperty("oauth_config_path")){
-                config = require(process.env.oauth_config_path);
+            if(process.env.hasOwnProperty("bamboo_oauth_config_path")){
+                config = require(process.env.bamboo_oauth_config_path);
             } else {
                 config = require("../../config.json");
             }
