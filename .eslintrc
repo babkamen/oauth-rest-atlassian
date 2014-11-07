@@ -25,7 +25,7 @@
     "no-underscore-dangle": 0, //- disallow dangling underscores in identifiers
     "no-wrap-func": 2, //- disallow wrapping of non-IIFE statements in parens
     "no-mixed-spaces-and-tabs": [2, true], //- disallow mixed spaces and tabs for indentation but allow smart tabs
-    "quotes": [2, "double"],
+    "quotes": [0, "single"],
     "quote-props": 2, //- 1e2 and 100 are coerced into strings before getting used as the property name. Both String(1e2) and String(100) happen to be equal to "100", which causes the “Duplicate data property in object literal not allowed in strict mode” error. Issues like that can be tricky to debug. Yet, they can easily be avoided, by simply always quoting property names in object literals.
     "semi": [2, "always"], //-require or disallow use of semicolons instead of ASI
     "sort-vars": 0, //- sort variables within the same declaration block (off by default)
@@ -52,7 +52,7 @@
 
     //Legacy
     "max-depth": [2, 10], //-This rule aims to reduce the complexity of your code by allowing you to configure the maximum depth blocks can be nested in a function.
-    "max-len": [2, 120, 4], //-specify the maximum length of a line in your program (off by default)
+    "max-len": [2, 120, 2], //-specify the maximum length of a line in your program (off by default)
     "max-params": [2, 8], //-limits the number of parameters that can be used in the function declaration. (off by default)
     "max-statements": [2, 50],  //- specify the maximum number of statement allowed in a function (off by default)
     "no-bitwise": 2, //-disallow use of bitwise operators (off by default)
