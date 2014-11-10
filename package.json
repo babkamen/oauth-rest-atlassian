@@ -1,7 +1,7 @@
 {
   "name": "oauth-rest-atlassian",
   "description": "An OAuth wrapper to authenticate and use the Atlassian REST API. The initial authorisation dance is managed through a local web page.",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "directories": {
     "lib": "lib",
     "bin": "bin",
@@ -22,7 +22,7 @@
     "url": "https://github.com/Cellarise/OAuth-REST-Atlassian.git"
   },
   "dependencies": {
-    "express": "^4.10.1",
+    "express": "^4.10.2",
     "errorhandler": "^1.1.1",
     "morgan": "^1.2.3",
     "cookie-parser": "^1.3.2",
@@ -58,6 +58,7 @@
     "underscore": "^1.6.0",
     "vasync": "^1.6.1",
     "webpack": "^1.3.7",
+    "node-dir-diff": "0.0.1",
     "yadda": "^0.11.2"
   },
   "scripts": {
@@ -104,8 +105,8 @@
         }
       }
     },
-    "build": "50",
-    "buildTimestamp": "2014-11-07T17:21:52.313+10:00"
+    "build": "52",
+    "buildTimestamp": "2014-11-11T00:04:57.661+10:00"
   },
   "optionalDependencies": {}
 }
