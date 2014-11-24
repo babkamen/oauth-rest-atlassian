@@ -95,7 +95,6 @@ module.exports = function testTasks(gulp, context) {
     var cwd = context.cwd;
     var pkg = context.package;
     var directories = pkg.directories;
-    var path = require("path");
 
     //results file path for mocha-bamboo-reporter-bgo
     process.env.MOCHA_FILE = path.join(cwd, directories.reports, "unit-mocha-tests.json");
