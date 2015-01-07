@@ -34,7 +34,7 @@
     "space-in-parens": [2, "never"], //-require or disallow spaces inside parentheses (off by default)
     "space-infix-ops": 2, //-require spaces around operators
     "space-return-throw-case": 2, //-require a space after return, throw, and case
-    "space-unary-word-ops": 2, //-require a space around word operators such as typeof (off by default)
+    "space-unary-ops": 2, //-require a space around word operators such as typeof (off by default)
     "max-nested-callbacks": [2, 4], //-specify the maximum depth callbacks can be nested (off by default)
     "one-var": 0, //-allow just one var statement per function (off by default)
     "wrap-regex": 0, //-When a regular expression is used in certain situation, it can end up looking like a division operator

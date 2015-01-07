@@ -44,12 +44,13 @@ new Yadda.FeatureFileSearch([testFeatures]).each(function eachFeatureFile(file) 
 
     featureFile(file, function featureFile(feature) {
       var libraries = [], loadedLibraries, yadda;
+
       //helper function to prepare multiple libraries for loading into the yadda interpreter
-      var requireLibraries = function requireLibraries(libraries) {
-        var requireLibrary = function requireLibrary(libraries, library) {
-          return libraries.concat(require(library));
+      var requireLibraries = function requireLibraries(libraries1) {
+        var requireLibrary = function requireLibrary(libraries2, library) {
+          return libraries2.concat(require(library));
         };
-        return libraries.reduce(requireLibrary, []);
+        return libraries1.reduce(requireLibrary, []);
       };
 
       //get libraries to load and load
@@ -64,7 +65,7 @@ new Yadda.FeatureFileSearch([testFeatures]).each(function eachFeatureFile(file) 
 
       //initiate yadda and execute each scenario
       yadda = new Yadda.Yadda(loadedLibraries, context);
-      scenarios(feature.scenarios, function scenario(scenario) {
+      scenarios(feature.scenarios, function scenario(scenarioParam) {
         //before test setup
         before(function before(done) {
           if (context.world.hasOwnProperty("before")) {
@@ -75,8 +76,8 @@ new Yadda.FeatureFileSearch([testFeatures]).each(function eachFeatureFile(file) 
           }
         });
         //run steps
-        steps(scenario.steps, function step(step, done) {
-          yadda.yadda(step, done);
+        steps(scenarioParam.steps, function step(stepParam, done) {
+          yadda.yadda(stepParam, done);
         });
         //after test teardown
         after(function after(done) {
