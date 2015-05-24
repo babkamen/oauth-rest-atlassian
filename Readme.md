@@ -7,7 +7,7 @@
 > An OAuth wrapper to authenticate and use the Atlassian REST API. The initial authorisation dance is managed through a local web page.
 
 
-##Installation
+## Installation
 
 Install as a local package.
 
@@ -16,7 +16,7 @@ npm install oauth-rest-atlassian
 ```
 
 
-###Config.json
+### Config.json
 
 Setup config.json at the root of the package.
 
@@ -66,7 +66,7 @@ Setup config.json at the root of the package.
 ```
 
 
-###OAuth private and public keys
+### OAuth private and public keys
 
 A private-public key pair is required to establish OAuth authorisation with an Atlassian product. The private key and public key can be generated using openssl:
 
@@ -76,7 +76,7 @@ $ openssl rsa -in rsa-key.pem -pubout -out rsa-key.pub
 ```
 
 
-###Setup application link
+### Setup application link
 
 An [application link](http://confluence.atlassian.com/display/JIRA/Configuring+Application+Links) profile must be established on the Atlassian product using a public key.  The Application Link requests the URL of the application to link. This URL is not used and a fill value should be used like `http://rest`.
 
@@ -91,7 +91,7 @@ In the incoming link screen (you can enter an application name of your choice):
 * Public Key: copy public key contents excluding the header `-----BEGIN PUBLIC KEY-----` and footer `-----END PUBLIC KEY-----`.
 
 
-###SSL Private key and certificate
+### SSL Private key and certificate
 
 To run the local website using the https protocol you will need an SSL private key and certificate.  The private key can be generated using openssl:
 
@@ -113,9 +113,9 @@ $ openssl x509 -req -in certreq.csr -signkey rsa-key.pem -out rsa-cert.pem
 ```
 
 
-##Usage 
+## Usage
 
-###Authorisation dance
+### Authorisation dance
 
 Start the local website.
 
@@ -132,7 +132,7 @@ If you have configured the https protocol and used a self signed certificate you
 If the Atlassian application configuration is valid and you have setup the application link correctly you should see the authorisation page.  Click the Allow button to retrieve and save the OAuth access tokens.  You can now use the REST API for the Atlassian product.
 
 
-###Using the REST API
+### Using the REST API
 
 You can test the REST API using the local website and path `/rest?req=`.
 
@@ -163,7 +163,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
 *documented by [jsdoc-to-markdown](https://github.com/75lb/jsdoc-to-markdown)*.
 
 
-#Changelog
+# Changelog
 
 <table style="width:100%;border-spacing:0px;border-collapse:collapse;margin:0px;padding:0px;border-width:0px;">
   <tr>
@@ -174,6 +174,18 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
   </tr>
     
 <tr>
+        <td colspan=4><strong>Version: 0.4.15 - released 2015-05-24</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-37</td>
+            <td><p>Package: Update development dependencies</p><p></p></td>
+          </tr>
+        
+    
+<tr>
         <td colspan=4><strong>Version: 0.4.14 - released 2015-05-21</strong></td>
       </tr>
         
@@ -181,7 +193,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-36</td>
-            <td>Package: Update jsdoc2markdown and regenerate documentation</td>
+            <td><p>Package: Update jsdoc2markdown and regenerate documentation</p><p></p></td>
           </tr>
         
     
@@ -193,21 +205,21 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-33</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-35</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-34</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -219,14 +231,14 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-32</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-31</td>
-            <td>Package: Update eslint configuration, test.js runner and dev dependencies</td>
+            <td><p>Package: Update eslint configuration, test.js runner and dev dependencies</p><p></p></td>
           </tr>
         
     
@@ -238,7 +250,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-30</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -250,7 +262,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-29</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -262,7 +274,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-28</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -274,35 +286,35 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-26</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-23</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-27</td>
-            <td>Package: Update eslint configuration, test.js runner and dev dependencies</td>
+            <td><p>Package: Update eslint configuration, test.js runner and dev dependencies</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-25</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-24</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -314,7 +326,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-22</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -326,7 +338,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-21</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -338,7 +350,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-20</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -350,14 +362,14 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-19</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-18</td>
-            <td>Package: Migrate from jshint to eslint static code analysis</td>
+            <td><p>Package: Migrate from jshint to eslint static code analysis</p><p></p></td>
           </tr>
         
     
@@ -369,21 +381,21 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-17</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-16</td>
-            <td>Package: Remove all gulp tasks except &#39;test&#39; and update readme docs</td>
+            <td><p>Package: Remove all gulp tasks except &#39;test&#39; and update readme docs</p><p></p></td>
           </tr>
         
 <tr>
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-15</td>
-            <td>Tests: Update config.json environment variable provided by CI server</td>
+            <td><p>Tests: Update config.json environment variable provided by CI server</p><p></p></td>
           </tr>
         
     
@@ -395,7 +407,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10403&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Bug</td>
             <td style="width:80px;text-align:left;">MDOAUTH-14</td>
-            <td>Rest: Fix object parse error when receiving an empty response from a post</td>
+            <td><p>Rest: Fix object parse error when receiving an empty response from a post</p><p></p></td>
           </tr>
         
     
@@ -407,7 +419,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-13</td>
-            <td>Package: Update test.js to enable relative library annotations in test features </td>
+            <td><p>Package: Update test.js to enable relative library annotations in test features </p><p></p></td>
           </tr>
         
     
@@ -419,7 +431,9 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Feature</td>
             <td style="width:80px;text-align:left;">MDOAUTH-12</td>
-            <td>Rest: Add Atlassian Bamboo support</td>
+            <td><p>Rest: Add Atlassian Bamboo support</p><p>As a developer
+I can execute a Bamboo rest query using oauth config
+So that I can efficiently read data or write data to my Bamboo server</p></td>
           </tr>
         
     
@@ -431,7 +445,9 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Feature</td>
             <td style="width:80px;text-align:left;">MDOAUTH-11</td>
-            <td>Rest: Add post, put and delete methods to rest function</td>
+            <td><p>Rest: Add post, put and delete methods to rest function</p><p>As a developer
+I can execute a JIRA rest query using the post, put and delete methods
+So that I can efficiently create, update or delete data on my JIRA server</p></td>
           </tr>
         
     
@@ -443,7 +459,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-10</td>
-            <td>Readme: Fix error in changelog.</td>
+            <td><p>Readme: Fix error in changelog.</p><p></p></td>
           </tr>
         
     
@@ -455,7 +471,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10403&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Bug</td>
             <td style="width:80px;text-align:left;">MDOAUTH-9</td>
-            <td>Rest: Fix function hang when provided invalid options.</td>
+            <td><p>Rest: Fix function hang when provided invalid options.</p><p></p></td>
           </tr>
         
     
@@ -467,7 +483,9 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Feature</td>
             <td style="width:80px;text-align:left;">MDOAUTH-7</td>
-            <td>Package: Add Atlassian JIRA rest query function</td>
+            <td><p>Package: Add Atlassian JIRA rest query function</p><p>As a developer
+I can execute a JIRA rest query using oauth config
+So that I can efficiently read data or write data to my JIRA server</p></td>
           </tr>
         
     
@@ -479,7 +497,7 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-6</td>
-            <td>Web server: Fix mistakes in the readme describing how to launch the server and the private key entry step.</td>
+            <td><p>Web server: Fix mistakes in the readme describing how to launch the server and the private key entry step.</p><p></p></td>
           </tr>
         
     
@@ -491,7 +509,9 @@ Execute a rest query using the http GET, POST, PUT or DELETE method
             <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype"/></td>
             <td style="width:80px;text-align:left;">Feature</td>
             <td style="width:80px;text-align:left;">MDOAUTH-4</td>
-            <td>OAuth: OAuth authorisation dance</td>
+            <td><p>OAuth: OAuth authorisation dance</p><p>As a developer
+I can authorise my OAuth REST connection using a private key
+So that I do not need to store my password</p></td>
           </tr>
         
     

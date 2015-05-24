@@ -1,4 +1,4 @@
-##Installation
+## Installation
 
 Install as a local package.
 
@@ -7,7 +7,7 @@ npm install {name}
 ```
 
 
-###Config.json
+### Config.json
 
 Setup config.json at the root of the package.
 
@@ -57,7 +57,7 @@ Setup config.json at the root of the package.
 ```
 
 
-###OAuth private and public keys
+### OAuth private and public keys
 
 A private-public key pair is required to establish OAuth authorisation with an Atlassian product. The private key and public key can be generated using openssl:
 
@@ -67,7 +67,7 @@ $ openssl rsa -in rsa-key.pem -pubout -out rsa-key.pub
 ```
 
 
-###Setup application link
+### Setup application link
 
 An [application link](http://confluence.atlassian.com/display/JIRA/Configuring+Application+Links) profile must be established on the Atlassian product using a public key.  The Application Link requests the URL of the application to link. This URL is not used and a fill value should be used like `http://rest`.
 
@@ -82,7 +82,7 @@ In the incoming link screen (you can enter an application name of your choice):
 * Public Key: copy public key contents excluding the header `-----BEGIN PUBLIC KEY-----` and footer `-----END PUBLIC KEY-----`.
 
 
-###SSL Private key and certificate
+### SSL Private key and certificate
 
 To run the local website using the https protocol you will need an SSL private key and certificate.  The private key can be generated using openssl:
 
@@ -104,9 +104,9 @@ $ openssl x509 -req -in certreq.csr -signkey rsa-key.pem -out rsa-cert.pem
 ```
 
 
-##Usage 
+## Usage
 
-###Authorisation dance
+### Authorisation dance
 
 Start the local website.
 
@@ -123,7 +123,7 @@ If you have configured the https protocol and used a self signed certificate you
 If the Atlassian application configuration is valid and you have setup the application link correctly you should see the authorisation page.  Click the Allow button to retrieve and save the OAuth access tokens.  You can now use the REST API for the Atlassian product.
 
 
-###Using the REST API
+### Using the REST API
 
 You can test the REST API using the local website and path `/rest?req=`.
 
