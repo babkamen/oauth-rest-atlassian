@@ -1,24 +1,18 @@
 "use strict";
 
-var config;
-if (process.env.hasOwnProperty("bamboo_oauth_config_path")) {
-  config = require(process.env.bamboo_oauth_config_path);
-} else {
-  config = require("../../config.json");
-}
-
 /* Feature: Rest: Add post, put and delete methods to rest function */
 module.exports = (function testSuite() {
   var English = require("yadda").localisation.English;
   var assert = require("assert");
   var rest = require("../..").rest;
+  var config = require("../..").config;
   return English.library()
     /*Scenario: JIRA POST rest query */
     .define("When I perform a post create operation", function test(done) {
       var self = this;
       var jiraQuery = "issue";
       rest({
-          "config": config.applications.jira,
+          "config": config("jira"),
           "query": jiraQuery,
           "method": "post",
           "postData": {
@@ -46,7 +40,7 @@ module.exports = (function testSuite() {
     .define("When I perform a put update operation", function test(done) {
       var jiraQuery = "issue/" + this.world.newIssue.key;
       rest({
-          "config": config.applications.jira,
+          "config": config("jira"),
           "query": jiraQuery,
           "method": "put",
           "postData": {
@@ -63,7 +57,7 @@ module.exports = (function testSuite() {
     .define("Then expected update is performed", function test(done) {
       var jiraQuery = "search?jql=(issue=" + this.world.newIssue.key + ")";
       rest({
-          "config": config.applications.jira,
+          "config": config("jira"),
           "query": jiraQuery
         },
         function restCallback(error, data) {
@@ -75,7 +69,7 @@ module.exports = (function testSuite() {
     .define("When I perform a transition operation", function test(done) {
       var jiraQuery = "issue/" + this.world.newIssue.key + "/transitions";
       rest({
-          "config": config.applications.jira,
+          "config": config("jira"),
           "query": jiraQuery,
           "method": "post",
           "postData": {
@@ -97,7 +91,7 @@ module.exports = (function testSuite() {
     .define("When I perform a delete operation", function test(done) {
       var jiraQuery = "issue/" + this.world.newIssue.key;
       rest({
-          "config": config.applications.jira,
+          "config": config("jira"),
           "query": jiraQuery,
           "method": "delete"
         },

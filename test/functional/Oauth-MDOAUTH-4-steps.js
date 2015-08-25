@@ -1,19 +1,14 @@
 "use strict";
-var config;
-if (process.env.hasOwnProperty("bamboo_oauth_config_path")) {
-  config = require(process.env.bamboo_oauth_config_path);
-} else {
-  config = require("../../config.json");
-}
 /* Feature: OAuth authorisation dance */
 module.exports = (function testSuite() {
   var English = require("yadda").localisation.English;
   var assert = require("assert");
   var OAuth = require("../..").OAuth;
+  var config = require("../..").config;
   return English.library()
     /*Scenario: JIRA authorisation */
     .define("Given I have an access token for my JIRA server", function test(done) {
-      var appConfig = config.applications.jira;
+      var appConfig = config("jira");
       var basePath = appConfig.protocol + "://" + appConfig.host + ":" + appConfig.port;
       this.world.appConfig = appConfig;
       this.world.basePath = basePath;

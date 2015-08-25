@@ -4,19 +4,14 @@ module.exports = (function testSuite() {
   var English = require("yadda").localisation.English;
   var assert = require("assert");
   var rest = require("../..").rest;
+  var config = require("../..").config;
   return English.library()
     /*Scenario: JIRA rest query */
     .define("$type I perform a jql search on issue $key and save the result", function test(type, key, done) {
       var self = this;
       var jiraQuery = "search?jql=(issue=" + key + ")";
-      var config;
-      if (process.env.hasOwnProperty("bamboo_oauth_config_path")) {
-        config = require(process.env.bamboo_oauth_config_path);
-      } else {
-        config = require("../../config.json");
-      }
       rest({
-          "config": config.applications.jira,
+          "config": config("jira"),
           "query": jiraQuery
         },
         function restCallback(error, data) {
