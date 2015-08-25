@@ -18,6 +18,7 @@ module.exports = function testTasks(gulp, context) {
   var path = require("path");
   var R = require("ramda");
   var logger = context.logger;
+  var COVERAGE_VAR = "__cpmCoverage__";
 
   var handleError = function handleError(err) {
     logger.error(err.toString());
@@ -60,11 +61,22 @@ module.exports = function testTasks(gulp, context) {
       }))
       .on("error", handleError)
       .pipe(istanbul.writeReports({
-        "coverageVariable": "__cpmCoverage__",
+        "coverageVariable": COVERAGE_VAR,
         "reporters": ["html", "lcov", require("istanbul-reporter-clover-limits"), "json-summary"],
         "reportOpts": {
           "dir": cwd + "/" + directories.reports + "/code-coverage",
           "watermarks": pkg.config.coverage.watermarks
+        }
+      }))
+      .pipe(istanbul.enforceThresholds({
+        "coverageVariable": COVERAGE_VAR,
+        "thresholds": {
+          "each": {
+            "statements": pkg.config.coverage.watermarks.statements[0],
+            "branches": pkg.config.coverage.watermarks.branches[0],
+            "lines": pkg.config.coverage.watermarks.lines[0],
+            "functions": pkg.config.coverage.watermarks.functions[0]
+          }
         }
       }));
   };
@@ -88,7 +100,7 @@ module.exports = function testTasks(gulp, context) {
      */
     return gulp.src(sourceGlobStr)
       .pipe(istanbul({
-        "coverageVariable": "__cpmCoverage__",
+        "coverageVariable": COVERAGE_VAR,
         "includeUntested": true
       }))
       .pipe(istanbul.hookRequire()); // Force `require` to return covered files
