@@ -87,7 +87,10 @@ module.exports = function testTasks(gulp, context) {
      * Make sure all these tasks do not require local references as defined above.
      */
     return gulp.src(sourceGlobStr)
-      .pipe(istanbul({"coverageVariable": "__cpmCoverage__"}))
+      .pipe(istanbul({
+        "coverageVariable": "__cpmCoverage__",
+        "includeUntested": true
+      }))
       .pipe(istanbul.hookRequire()); // Force `require` to return covered files
         // Covering files - note: finish event called when finished (not end event)
   });
@@ -108,7 +111,7 @@ module.exports = function testTasks(gulp, context) {
     process.env.MOCHA_FILE = path.join(cwd, directories.reports, "unit-mocha-tests.json");
     //make sure the Reports directory exists - required for mocha-bamboo-reporter-bgo
     mkdirp.sync(path.join(cwd, directories.reports));
-    return test("mocha-bamboo-reporter-bgo");
+    return test("spec");
   });
 
   /**
