@@ -1,4 +1,4 @@
-#Changelog
+# Changelog
 
 <table style="width:100%;border-spacing:0px;border-collapse:collapse;margin:0px;padding:0px;border-width:0px;">
   <tr>
@@ -9,14 +9,150 @@
   </tr>
     
 <tr>
+        <td colspan=4><strong>Version: 0.4.20 - released 2015-08-25</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-42</td>
+            <td><p>Package: Update development dependencies and configure for travis-ci</p><p></p></td>
+          </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10412&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Minor</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-43</td>
+            <td><p>OAuth: Refactor use of config.json and add default config</p><p></p></td>
+          </tr>
+        
+    
+<tr>
+        <td colspan=4><strong>Version: 0.4.19 - released 2015-08-04</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-41</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
+          </tr>
+        
+    
+<tr>
+        <td colspan=4><strong>Version: 0.4.18 - released 2015-08-02</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-40</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
+          </tr>
+        
+    
+<tr>
+        <td colspan=4><strong>Version: 0.4.17 - released 2015-07-07</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-39</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
+          </tr>
+        
+    
+<tr>
+        <td colspan=4><strong>Version: 0.4.16 - released 2015-06-22</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-38</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
+          </tr>
+        
+    
+<tr>
+        <td colspan=4><strong>Version: 0.4.15 - released 2015-05-24</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-37</td>
+            <td><p>Package: Update development dependencies</p><p></p></td>
+          </tr>
+        
+    
+<tr>
+        <td colspan=4><strong>Version: 0.4.14 - released 2015-05-21</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-36</td>
+            <td><p>Package: Update jsdoc2markdown and regenerate documentation</p><p></p></td>
+          </tr>
+        
+    
+<tr>
+        <td colspan=4><strong>Version: 0.4.13 - released 2015-04-20</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-33</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
+          </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-35</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
+          </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-34</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
+          </tr>
+        
+    
+<tr>
+        <td colspan=4><strong>Version: 0.4.12 - released 2015-02-24</strong></td>
+      </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-32</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
+          </tr>
+        
+<tr>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
+            <td style="width:80px;text-align:left;">MDOAUTH-31</td>
+            <td><p>Package: Update eslint configuration, test.js runner and dev dependencies</p><p></p></td>
+          </tr>
+        
+    
+<tr>
         <td colspan=4><strong>Version: 0.4.11 - released 2015-02-03</strong></td>
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-30</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -25,10 +161,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-29</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -37,10 +173,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-28</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -49,38 +185,38 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-26</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-23</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-27</td>
-            <td>Package: Update eslint configuration, test.js runner and dev dependencies</td>
+            <td><p>Package: Update eslint configuration, test.js runner and dev dependencies</p><p></p></td>
           </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-25</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-24</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -89,10 +225,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-22</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -101,10 +237,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-21</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -113,10 +249,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-20</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
     
@@ -125,17 +261,17 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-19</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-18</td>
-            <td>Package: Migrate from jshint to eslint static code analysis</td>
+            <td><p>Package: Migrate from jshint to eslint static code analysis</p><p></p></td>
           </tr>
         
     
@@ -144,24 +280,24 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-17</td>
-            <td>Package: Update package dependencies</td>
+            <td><p>Package: Update package dependencies</p><p></p></td>
           </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-16</td>
-            <td>Package: Remove all gulp tasks except &#39;test&#39; and update readme docs</td>
+            <td><p>Package: Remove all gulp tasks except &#39;test&#39; and update readme docs</p><p></p></td>
           </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-15</td>
-            <td>Tests: Update config.json environment variable provided by CI server</td>
+            <td><p>Tests: Update config.json environment variable provided by CI server</p><p></p></td>
           </tr>
         
     
@@ -170,10 +306,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10403&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Bug</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10403&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Bug</td>
             <td style="width:80px;text-align:left;">MDOAUTH-14</td>
-            <td>Rest: Fix object parse error when receiving an empty response from a post</td>
+            <td><p>Rest: Fix object parse error when receiving an empty response from a post</p><p></p></td>
           </tr>
         
     
@@ -182,10 +318,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-13</td>
-            <td>Package: Update test.js to enable relative library annotations in test features </td>
+            <td><p>Package: Update test.js to enable relative library annotations in test features </p><p></p></td>
           </tr>
         
     
@@ -194,10 +330,12 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Feature</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Feature</td>
             <td style="width:80px;text-align:left;">MDOAUTH-12</td>
-            <td>Rest: Add Atlassian Bamboo support</td>
+            <td><p>Rest: Add Atlassian Bamboo support</p><p>As a developer
+I can execute a Bamboo rest query using oauth config
+So that I can efficiently read data or write data to my Bamboo server</p></td>
           </tr>
         
     
@@ -206,10 +344,12 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Feature</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Feature</td>
             <td style="width:80px;text-align:left;">MDOAUTH-11</td>
-            <td>Rest: Add post, put and delete methods to rest function</td>
+            <td><p>Rest: Add post, put and delete methods to rest function</p><p>As a developer
+I can execute a JIRA rest query using the post, put and delete methods
+So that I can efficiently create, update or delete data on my JIRA server</p></td>
           </tr>
         
     
@@ -218,10 +358,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-10</td>
-            <td>Readme: Fix error in changelog.</td>
+            <td><p>Readme: Fix error in changelog.</p><p></p></td>
           </tr>
         
     
@@ -230,10 +370,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10403&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Bug</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10403&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Bug</td>
             <td style="width:80px;text-align:left;">MDOAUTH-9</td>
-            <td>Rest: Fix function hang when provided invalid options.</td>
+            <td><p>Rest: Fix function hang when provided invalid options.</p><p></p></td>
           </tr>
         
     
@@ -242,10 +382,12 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Feature</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Feature</td>
             <td style="width:80px;text-align:left;">MDOAUTH-7</td>
-            <td>Package: Add Atlassian JIRA rest query function</td>
+            <td><p>Package: Add Atlassian JIRA rest query function</p><p>As a developer
+I can execute a JIRA rest query using oauth config
+So that I can efficiently read data or write data to my JIRA server</p></td>
           </tr>
         
     
@@ -254,10 +396,10 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Non-functional</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10419&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Non-functional</td>
             <td style="width:80px;text-align:left;">MDOAUTH-6</td>
-            <td>Web server: Fix mistakes in the readme describing how to launch the server and the private key entry step.</td>
+            <td><p>Web server: Fix mistakes in the readme describing how to launch the server and the private key entry step.</p><p></p></td>
           </tr>
         
     
@@ -266,10 +408,12 @@
       </tr>
         
 <tr>
-            <td style="width:20px;text-align:center;"><img src='https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype'/></td>
-            <td style="width:80px;text-align:center;">Feature</td>
+            <td style="width:20px;padding:0;margin:0;text-align:center;"><img src="https://jira.cellarise.com:80/secure/viewavatar?size=xsmall&amp;avatarId=10411&amp;avatarType=issuetype"/></td>
+            <td style="width:80px;text-align:left;">Feature</td>
             <td style="width:80px;text-align:left;">MDOAUTH-4</td>
-            <td>OAuth: OAuth authorisation dance</td>
+            <td><p>OAuth: OAuth authorisation dance</p><p>As a developer
+I can authorise my OAuth REST connection using a private key
+So that I do not need to store my password</p></td>
           </tr>
         
     
