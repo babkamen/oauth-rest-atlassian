@@ -45,29 +45,29 @@
       "stats": {
         "lines": {
           "pctSkipped": 0,
-          "pct": 87,
+          "pct": 85,
           "colour": "green"
         },
         "branches": {
           "pctSkipped": 33,
-          "pct": 74,
+          "pct": 70,
           "colour": "yellow"
         },
         "statements": {
           "pctSkipped": 36,
-          "pct": 87,
+          "pct": 85,
           "colour": "green"
         },
         "functions": {
           "pctSkipped": 42,
-          "pct": 89,
+          "pct": 85,
           "colour": "green"
         },
         "skipped": {
           "pct": 28
         },
         "overall": {
-          "pct": 84,
+          "pct": 81,
           "colour": "green"
         }
       }
