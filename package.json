@@ -2,7 +2,7 @@
   "name": "oauth-rest-atlassian",
   "author": "John Barry",
   "description": "An OAuth wrapper to authenticate and use the Atlassian REST API. The initial authorisation dance is managed through a local web page.",
-  "version": "0.0.0",
+  "version": "0.4.22",
   "directories": {
     "lib": "lib",
     "bin": "bin",
@@ -15,8 +15,8 @@
   },
   "config": {
     "projectCode": "MDOAUTH",
-    "build": "n/a",
-    "buildTimestamp": "2015-10-05T03:31:37.129Z",
+    "build": "89",
+    "buildTimestamp": "2015-10-05T03:40:48.256Z",
     "adminEmail": "admin@cellarise.com",
     "coverage": {
       "codeClimate": true,
