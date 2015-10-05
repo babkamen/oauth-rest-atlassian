@@ -35,6 +35,7 @@ Setup config.json at the root of the package.
                 "access-token": "/plugins/servlet/oauth/access-token",
                 "authorize": "/plugins/servlet/oauth/authorize"
             }
+        },
         "bamboo": {
             "protocol": "https",
             "host": "myhost.com",
@@ -51,7 +52,6 @@ Setup config.json at the root of the package.
                 "authorize": "/plugins/servlet/oauth/authorize"
             }
         }
-        },
     }
 }
 ```
