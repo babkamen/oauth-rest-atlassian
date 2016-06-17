@@ -1,0 +1,42 @@
+{
+  "protocol": "http",
+  "host": "localhost",
+  "port": "8080",
+  "SSLPrivateKey": "",
+  "SSLCertificate": "",
+  "consumerPrivateKeyFile": "/rsa.pem",
+  "applications": {
+    "jira": {
+      "protocol": "https",
+      "host": "myhost.com",
+      "port": "443",
+      "oauth": {
+        "consumer_key": "node-oauth-key1",
+        "consumer_secret": "-----BEGIN RSA PRIVATE KEY-----\nMIICXQIBAAKBgQCrGn83sa94ATA9V/kzNgJglZ2tPFaaAWB7LZl0+x2yryO44AYo\nHlFToyIAAm09/CRW5v+A0xA+23ytgVZ+KcyJ3N02eK8gofat9gq313WjmLYLdLEL\nqijpnfpUDdV6jhJL5FsayC+90gSKGuMMFhKUlrsZpTv7zBEC91zG3t82HQIDAQAB\nAoGBAJkQHAwzjNfaoE/QGiKgxyGl1ib52jLs1mV61lOarOeC237wETHkZTZfsfO2\nOAmCPPPss1aH+XlxmagREtHMDKc0m7h0ZpbHA471wsDDEl7qwK20I8mPmJNW2nCw\nWgym1AV2O6mIDOFGxuHEhcHispdO+vzik6ZBLgcwOw/ZRN7BAkEA3A5EjeuZIwgT\ntYstY4ef7RDL3nyeg95lGeYkLUMgkRFaN2PImHvxPtMRHeCxP6JyY8nnhWFYCjEg\n6Dv9s0vpsQJBAMcNRN969ut4iw8nE2ljYkkCqSvxE9D0SVnk6pSTo7/OsA2uXpWX\nLLlxogT2fBL6i7KZHRIVeLHcbFAaELcfwi0CQQCsEEvyXIHFLo+aqFS5OlcGWtfO\nA8s+eSq8cYNgENjqFZNhNBipgmBEK2162zI8+5xOApWRaWgZsAh3DlF1XKpBAkAk\nLf0+wZLv6dEcx/V3SmEq9Bjbq832RPCwLjOVHeC9lEvbsL3wYrH2YvkX/dU/fdq2\nc64dA1oUugPV62buYg9hAkB0Kk31e6nRwPJb4uHJLB9MyVmlHAG/dDncRPM20sPi\nATMYUoeTTpU2zaWPlGAcc0kHIvmuB00hZFKMFmrgFFc3\n-----END RSA PRIVATE KEY-----\n",
+        "access_token": "",
+        "access_token_secret": ""
+      },
+      "paths": {
+        "request-token": "/plugins/servlet/oauth/request-token",
+        "access-token": "/plugins/servlet/oauth/access-token",
+        "authorize": "/plugins/servlet/oauth/authorize"
+      }
+    },
+    "bamboo": {
+      "protocol": "https",
+      "host": "myhost.com",
+      "port": "443",
+      "oauth": {
+        "consumer_key": "node-oauth-key1",
+        "consumer_secret": "-----BEGIN RSA PRIVATE KEY-----\nMIICXQIBAAKBgQCrGn83sa94ATA9V/kzNgJglZ2tPFaaAWB7LZl0+x2yryO44AYo\nHlFToyIAAm09/CRW5v+A0xA+23ytgVZ+KcyJ3N02eK8gofat9gq313WjmLYLdLEL\nqijpnfpUDdV6jhJL5FsayC+90gSKGuMMFhKUlrsZpTv7zBEC91zG3t82HQIDAQAB\nAoGBAJkQHAwzjNfaoE/QGiKgxyGl1ib52jLs1mV61lOarOeC237wETHkZTZfsfO2\nOAmCPPPss1aH+XlxmagREtHMDKc0m7h0ZpbHA471wsDDEl7qwK20I8mPmJNW2nCw\nWgym1AV2O6mIDOFGxuHEhcHispdO+vzik6ZBLgcwOw/ZRN7BAkEA3A5EjeuZIwgT\ntYstY4ef7RDL3nyeg95lGeYkLUMgkRFaN2PImHvxPtMRHeCxP6JyY8nnhWFYCjEg\n6Dv9s0vpsQJBAMcNRN969ut4iw8nE2ljYkkCqSvxE9D0SVnk6pSTo7/OsA2uXpWX\nLLlxogT2fBL6i7KZHRIVeLHcbFAaELcfwi0CQQCsEEvyXIHFLo+aqFS5OlcGWtfO\nA8s+eSq8cYNgENjqFZNhNBipgmBEK2162zI8+5xOApWRaWgZsAh3DlF1XKpBAkAk\nLf0+wZLv6dEcx/V3SmEq9Bjbq832RPCwLjOVHeC9lEvbsL3wYrH2YvkX/dU/fdq2\nc64dA1oUugPV62buYg9hAkB0Kk31e6nRwPJb4uHJLB9MyVmlHAG/dDncRPM20sPi\nATMYUoeTTpU2zaWPlGAcc0kHIvmuB00hZFKMFmrgFFc3\n-----END RSA PRIVATE KEY-----\n",
+        "access_token": "",
+        "access_token_secret": ""
+      },
+      "paths": {
+        "request-token": "/plugins/servlet/oauth/request-token",
+        "access-token": "/plugins/servlet/oauth/access-token",
+        "authorize": "/plugins/servlet/oauth/authorize"
+      }
+    }
+  }
+}
