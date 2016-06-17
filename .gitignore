@@ -1,10 +1,5 @@
 .idea/
-/Tools/
-/Build/
-/Temp/
 /bower_components/
-/Reports/
-/rsa*
 /config.json
 /*.log
 /Auto_Build/
