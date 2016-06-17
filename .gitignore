@@ -1,6 +1,5 @@
 .idea/
 /bower_components/
-/config.json
 /*.log
 /Auto_Build/
 /node_modules/
